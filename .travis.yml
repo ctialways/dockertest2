@@ -1,9 +1,13 @@
 language: bash
-sudo: required
-services:
-      - docker
- script:
-     - sudo docker build -t mynginx .
-     - sudo docker run -d -p 80:80 mynginx
-     - curl localhost:80
 
+sudo: required
+
+services:
+   - docker
+
+script:
+     - sudo docker build -t mynginx .
+        
+     - sudo docker run -d -p 80:80 mynginx
+      
+     - curl localhost:80
