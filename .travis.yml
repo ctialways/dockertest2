@@ -1,7 +1,7 @@
 language:bash
 sudo:required
 services:
-      -docker
+      - docker
  script:
      - sudo docker build -t mynginx .
      - sudo docker run -d -p 80:80 mynginx
